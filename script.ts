@@ -1,9 +1,8 @@
-// script.ts
-
 const UNICODE_CHARS = "·┼╬░▒▓█"; // Characters used for Unicode art, ordered by brightness
 
 // Function to convert an image or canvas to ASCII
 function imageToASCII(element: HTMLImageElement | HTMLCanvasElement, resolution: number): string {
+    console.log('Converting to ASCII:', element);
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = resolution;
@@ -27,6 +26,7 @@ function imageToASCII(element: HTMLImageElement | HTMLCanvasElement, resolution:
         ascii += '\n';
     }
 
+    console.log('ASCII conversion complete:', ascii);
     return ascii;
 }
 
@@ -42,6 +42,7 @@ function videoToASCII(video: HTMLVideoElement, resolution: number, callback: (as
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
         const ascii = imageToASCII(canvas, resolution);
         asciiFrames.push(ascii);
+        console.log('Captured frame:', ascii);
     };
 
     video.addEventListener('play', () => {
@@ -49,6 +50,7 @@ function videoToASCII(video: HTMLVideoElement, resolution: number, callback: (as
             if (video.paused || video.ended) {
                 clearInterval(interval);
                 callback(asciiFrames);
+                console.log('Video ended, total frames captured:', asciiFrames.length);
             } else {
                 captureFrame();
             }
@@ -61,6 +63,7 @@ function displayASCIIFrames(asciiFrames: string[], container: HTMLElement) {
     let frameIndex = 0;
     setInterval(() => {
         container.innerText = asciiFrames[frameIndex];
+        console.log('Displaying frame:', frameIndex);
         frameIndex = (frameIndex + 1) % asciiFrames.length;
     }, 1000 / 30); // Display at 30 FPS
 }
@@ -76,17 +79,25 @@ function loadFile(filePath: string) {
         const image = new Image();
         image.src = filePath;
         image.onload = () => {
+            console.log('Image loaded:', image);
             const ascii = imageToASCII(image, 100);
             asciiOutput.innerText = ascii;
+        };
+        image.onerror = (error) => {
+            console.error('Error loading image:', error);
         };
     } else if (fileType === 'gif' || fileType === 'mp4') {
         const video = document.createElement('video');
         video.src = filePath;
         video.onloadeddata = () => {
+            console.log('Video loaded:', video);
             videoToASCII(video, 100, (asciiFrames) => {
                 displayASCIIFrames(asciiFrames, asciiOutput);
             });
             video.play();
+        };
+        video.onerror = (error) => {
+            console.error('Error loading video:', error);
         };
     }
 }
@@ -94,7 +105,7 @@ function loadFile(filePath: string) {
 // Function to populate the file list
 function populateFileList() {
     const fileList = document.getElementById('fileList');
-    const files = ['bobross.jpg', 'he-man.gif', 'spiderman.gif']; // Update with your custom file names
+    const files = ['bobross.jpg', 'he-man.gif', 'spider-man.gif']; // Update with your custom file names
 
     fileList.innerHTML = ''; // Clear existing list items
 
