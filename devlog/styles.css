@@ -1,0 +1,28 @@
+/* styles.css */
+body {
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+}
+
+#menu {
+    width: 200px;
+    padding: 10px;
+    border-right: 1px solid white;
+}
+
+#viewbox {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#asciiOutput {
+    white-space: pre;
+    overflow: auto;
+}
