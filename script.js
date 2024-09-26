@@ -1,5 +1,5 @@
 // script.ts
-var PALETTE = "·┼╬░▒▓█"; // Characters used for Unicode art, ordered by brightness
+var UNICODE_CHARS = "·┼╬░▒▓█"; // Characters used for Unicode art, ordered by brightness
 // Function to convert an image or canvas to ASCII
 function imageToASCII(element, resolution) {
     var canvas = document.createElement('canvas');
@@ -17,8 +17,8 @@ function imageToASCII(element, resolution) {
             var g = data[offset + 1];
             var b = data[offset + 2];
             var brightness = (r + g + b) / 3;
-            var charIndex = Math.floor((brightness / 255) * (PALETTE.length - 1));
-            ascii += PALETTE[charIndex];
+            var charIndex = Math.floor((brightness / 255) * (UNICODE_CHARS.length - 1));
+            ascii += UNICODE_CHARS[charIndex];
         }
         ascii += '\n';
     }
@@ -60,6 +60,7 @@ function displayASCIIFrames(asciiFrames, container) {
 function loadFile(filePath) {
     var fileType = filePath.split('.').pop();
     var asciiOutput = document.getElementById('asciiOutput');
+    console.log("Loading file: ".concat(filePath));
     if (fileType === 'jpg' || fileType === 'png') {
         var image_1 = new Image();
         image_1.src = filePath;
@@ -82,13 +83,15 @@ function loadFile(filePath) {
 // Function to populate the file list
 function populateFileList() {
     var fileList = document.getElementById('fileList');
-    var files = ['bobross.jpg', 'he-man.gif', 'spiderman.gif']; // Add your example files here
+    var files = ['custom1.gif', 'custom2.jpg']; // Update with your custom file names
+    fileList.innerHTML = ''; // Clear existing list items
     files.forEach(function (file) {
         var listItem = document.createElement('li');
         listItem.innerText = file;
         listItem.addEventListener('click', function () { return loadFile("examples/".concat(file)); });
         fileList.appendChild(listItem);
     });
+    console.log('File list populated:', files);
 }
 // Initialize the file list
 populateFileList();
