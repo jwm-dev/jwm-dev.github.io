@@ -82,7 +82,7 @@ function loadFile(filePath) {
 // Function to populate the file list
 function populateFileList() {
     var fileList = document.getElementById('fileList');
-    var files = ['example1.jpg', 'example2.gif']; // Add your example files here
+    var files = ['bobross.jpg', 'he-man.gif', 'spiderman.gif']; // Add your example files here
     files.forEach(function (file) {
         var listItem = document.createElement('li');
         listItem.innerText = file;
