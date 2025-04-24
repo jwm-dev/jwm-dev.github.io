@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://jwm-dev.github.io/"
+base_url = "https://jwm-dev.github.io"
 title = "jwm-dev"
 theme = "ergo"
 
@@ -20,28 +20,29 @@ highlight_code = false
 
 profile = "profile.svg"
 description = "Portfolio and networking site for Jeffrey Gregory, AKA jwm-dev."
-color_themes = ["default"]
+color_themes = ["dark", "default"]
 
 [extra.font_awesome]
 kit = "d203275317"
 
 [[extra.socials]]
 icon = "github"
-display = "jwm / Jeffrey W. Gregory"
+display = "jwm-dev @ github"
 uri = "https://github.com/jwm-dev"
 
 [[extra.socials]]
 icon = "linkedin"
-display = "Jeffrey Gregory"
+display = "Jeffrey G. @ LinkedIn"
 uri = "https://www.linkedin.com/in/jeffrey-gregory-b26853294/"
 
 [[extra.socials]]
 icon = "envelope"
 icon_class = "fas"
-display = "Send me mail!"
+display = "Mail"
 uri = "mailto:$jwmgregory@gmail.com?subject=[Hello, jwm!]"
 
 [[extra.socials]]
 icon = "phone"
-display = "Give me a text or call!"
+icon_class = "fas"
+display = "Cellular"
 uri = "tel:+14057785170"
