@@ -3,7 +3,7 @@ base_url = "https://jwm-dev.github.io"
 title = "║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║"
 theme = "ergo"
 
-description="\"*... If the meaning of the words \"machine\" and \"think\" are to be found by examining how they are commonly used, it is difficult to escape the conclusion that the meaning and the answer to the question, \"Can machines think?\" is to be sought in a statistical survey such as a Gallup poll. But this is absurd.*\" \n\n- Alan M. Turing, \"*Computing Machinery and Intelligence*, 1950\""
+description="\"*... If the meaning of the words \\\"machine\\\" and \\\"think\\\" are to be found by examining how they are commonly used, it is difficult to escape the conclusion that the meaning and the answer to the question, 'Can machines think?' is to be sought in a statistical survey such as a Gallup poll. But this is absurd.*\" \n\n- Alan M. Turing, *\"Computing Machinery and Intelligence,\"*  \n01 October 1950"
 default_language = "en"
 
 generate_feeds = true
