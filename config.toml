@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://jwm-dev.github.io"
-title = "jwm-dev"
+title = "║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║"
 theme = "ergo"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -18,7 +18,7 @@ highlight_code = false
 [extra]
 # Put all your custom variables here
 
-profile = "profile.svg"
+profile = "portrait.png"
 description = "Portfolio and networking site for Jeffrey Gregory, AKA jwm-dev."
 color_themes = ["dark", "default"]
 
@@ -32,7 +32,7 @@ uri = "https://github.com/jwm-dev"
 
 [[extra.socials]]
 icon = "linkedin"
-display = "Jeffrey G. @ LinkedIn"
+display = "Jeffrey G. @ Linked"
 uri = "https://www.linkedin.com/in/jeffrey-gregory-b26853294/"
 
 [[extra.socials]]
