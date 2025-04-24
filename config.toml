@@ -34,7 +34,7 @@ kit = "d203275317"
 
 [[extra.socials]]
 icon = "github"
-display = "jwm-dev@github"
+display = "jwm-dev@gh"
 uri = "https://github.com/jwm-dev"
 
 [[extra.socials]]
