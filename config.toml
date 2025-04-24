@@ -1,0 +1,47 @@
+# The URL the site will be built for
+base_url = "https://www.jwm-dev.github.io"
+title = "jwm-dev"
+theme = "ergo"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+#highlight_theme = "solarized-light"
+
+[extra]
+# Put all your custom variables here
+
+profile = "profile.svg"
+description = "Portfolio and networking site for Jeffrey Gregory, AKA jwm-dev."
+color_themes = ["default"]
+
+[extra.font_awesome]
+kit = "d203275317"
+
+[[extra.socials]]
+icon = "github"
+display = "jwm / Jeffrey W. Gregory"
+uri = "https://github.com/jwm-dev"
+
+[[extra.socials]]
+icon = "linkedin"
+display = "Jeffrey Gregory"
+uri = "https://www.linkedin.com/in/jeffrey-gregory-b26853294/"
+
+[[extra.socials]]
+icon = "envelope"
+icon_class = "fas"
+display = "Send me mail!"
+uri = "mailto:$jwmgregory@gmail.com?subject=[Hello, jwm!]"
+
+[[extra.socials]]
+icon = "phone"
+display = "Give me a text or call!"
+uri = "tel:+14057785170"
