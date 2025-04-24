@@ -3,6 +3,13 @@ base_url = "https://jwm-dev.github.io"
 title = "║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║"
 theme = "ergo"
 
+description="\"*... If the meaning of the words \"machine\" and \"think\" are to be found by examining how they are commonly used, it is difficult to escape the conclusion that the meaning and the answer to the question, \"Can machines think?\" is to be sought in a statistical survey such as a Gallup poll. But this is absurd.*\" \n\n- Alan M. Turing, \"*Computing Machinery and Intelligence*, 1950\""
+default_language = "en"
+
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+feed_limit = 20
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -12,14 +19,14 @@ build_search_index = false
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
+highlight_code = true
 #highlight_theme = "solarized-light"
 
 [extra]
 # Put all your custom variables here
 
 profile = "portrait.png"
-description = "Portfolio and networking site for Jeffrey Gregory, AKA jwm-dev."
+country_flags = true
 color_themes = ["dark", "default"]
 
 [extra.font_awesome]
