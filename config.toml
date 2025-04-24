@@ -34,12 +34,12 @@ kit = "d203275317"
 
 [[extra.socials]]
 icon = "github"
-display = "jwm-dev @ github"
+display = "jwm-dev@github"
 uri = "https://github.com/jwm-dev"
 
 [[extra.socials]]
 icon = "linkedin"
-display = "Jeffrey @ Linked"
+display = "Jeffrey@Linked"
 uri = "https://www.linkedin.com/in/jeffrey-gregory-b26853294/"
 
 [[extra.socials]]
