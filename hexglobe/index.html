@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- SEO -->
+        
+        <title> H3glObe, or HexGlobe | ║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║ </title>
+        
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+        <!-- js -->
+        <script src="https:&#x2F;&#x2F;jwm-dev.github.io/theme_selector.js"></script>
+        <script src="https://kit.fontawesome.com/d203275317.js" crossorigin="anonymous"></script>
+
+        <!--  css -->
+        <link id="themeCSS" rel="stylesheet"
+                            href="https:&#x2F;&#x2F;jwm-dev.github.io/dark.css"
+                            />
+
+        <!-- fonts -->
+        <!-- preload  -->
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
+        <!-- load -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
+        
+
+        
+        
+        <link rel="alternate" type="application/atom+xml" title="║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║ RSS" href="https://jwm-dev.github.io/atom.xml">
+        
+        
+    </head>
+
+    <body onload="main();">
+      
+<input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
+<label class="menu cross menu--1" for="openSidebarMenu">
+    <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="30" />
+        <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+        <path class="line--2" d="M0 50h70" />
+        <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+    </svg>
+</label>
+
+<div id="sidebarMenu">
+    <div class="menu_wrapper">
+        <ul class="sidebarMenuInner">
+            <li>
+                <a href="https:&#x2F;&#x2F;jwm-dev.github.io" >║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║</a>
+                <div class="menu_div" ></div>
+            </li>
+            
+            
+
+
+
+<li >
+    <a href="https:&#x2F;&#x2F;github.com&#x2F;jwm-dev" target="_blank">
+        jwm-dev@gh
+        <i class="fab fa-github"></i>
+    </a>
+</li>
+
+
+
+<li >
+    <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;jeffrey-gregory-b26853294&#x2F;" target="_blank">
+        Jeffrey@Linked
+        <i class="fab fa-linkedin"></i>
+    </a>
+</li>
+
+
+
+<li >
+    <a href="mailto:$jwmgregory@gmail.com?subject=[Hello, jwm!]" target="_blank">
+        Mail
+        <i class="fas fa-envelope"></i>
+    </a>
+</li>
+
+
+
+<li >
+    <a href="tel:+14057785170" target="_blank">
+        Cellular
+        <i class="fas fa-phone"></i>
+    </a>
+</li>
+
+
+
+
+
+<li >
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io&#x2F;atom.xml" target="_blank">
+        atom
+        <i class="fas fa-rss"></i>
+    </a>
+</li>
+
+
+
+        </ul>
+    </div>
+</div>
+
+
+
+      
+<nav id="overlord" class="overlord" >
+  
+  
+<figure class="mini_logo ">
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io" style="background-image: url(/img/portrait.png)"></a>
+</figure>
+<h5>
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io">║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║</a>
+</h5>
+
+  
+
+
+
+</nav>
+
+<section class="post_container">
+  <article>
+    
+      <h1 class="article_title"><a href="https:&#x2F;&#x2F;jwm-dev.github.io&#x2F;hexglobe&#x2F;" id="article_link">H3glObe, or HexGlobe</a></h1>
+      
+<ul class="frontmatter frontmatter_page" id="frontmatter">
+    <li>
+        <time class="article_time" datetime="2025-04-25">April 25, 2025</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> 569 words </li>
+    <span class="dotDivider" ></span>
+    <li> 3 min </li>
+</ul>
+
+      <h1 id="h3globe-a-high-performance-hexagonal-geospatial-visualization-tool">H3glObe: A High-Performance Hexagonal Geospatial Visualization Tool</h1>
+<p><strong>Project URL:</strong> <a href="https://jwm.place/hexglobe/">https://jwm.place/hexglobe/</a><br />
+<strong>Source Code:</strong> <a href="https://github.com/jwm-dev/H3glObe">https://github.com/jwm-dev/H3glObe</a></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p><strong>H3glObe</strong> is a geospatial visualization tool that renders a 3D globe overlaid with hexagonal cells, utilizing the H3 geospatial indexing system. Built with Rust and WebGPU, it offers high-performance, real-time rendering capabilities directly in the browser. The project is designed to demonstrate the integration of H3 indexing with modern GPU-accelerated graphics, providing an interactive platform for exploring geospatial data.</p>
+<hr />
+<h2 id="technical-architecture">Technical Architecture</h2>
+<h3 id="core-technologies">Core Technologies</h3>
+<ul>
+<li><strong>Rust</strong>: The primary programming language, chosen for its performance and safety features.</li>
+<li><strong>WebGPU</strong>: A modern graphics API that enables high-performance rendering in web environments.</li>
+<li><strong>H3</strong>: A hexagonal hierarchical geospatial indexing system developed by Uber, used for spatial indexing and visualization.</li>
+</ul>
+<h3 id="project-structure">Project Structure</h3>
+<p>The repository is organized as follows:</p>
+<ul>
+<li><code>src/</code>: Contains the main application code, including initialization, rendering logic, and event handling.</li>
+<li><code>shaders/</code>: Houses WGSL (WebGPU Shading Language) shader programs responsible for rendering the globe and hexagonal cells.</li>
+<li><code>Cargo.toml</code> and <code>Cargo.lock</code>: Define the project's dependencies and build configurations.</li>
+</ul>
+<hr />
+<h2 id="functionality">Functionality</h2>
+<h3 id="globe-rendering">Globe Rendering</h3>
+<p>H3glObe renders a 3D globe using WebGPU, mapping textures and lighting to create a realistic representation of the Earth. The rendering pipeline is optimized for performance, allowing smooth interactions and real-time updates.</p>
+<h3 id="hexagonal-overlay">Hexagonal Overlay</h3>
+<p>Utilizing the H3 indexing system, the application overlays hexagonal cells onto the globe. These cells can represent various data metrics, such as population density, temperature, or other geospatial information. The hierarchical nature of H3 allows for multiple levels of detail, enabling users to zoom in and out seamlessly.</p>
+<h3 id="interactivity">Interactivity</h3>
+<p>Users can interact with the globe through mouse or touch inputs, rotating and zooming to explore different regions. The application responds dynamically to user interactions, updating the visualization in real-time.</p>
+<hr />
+<h2 id="implementation-details">Implementation Details</h2>
+<h3 id="rust-and-webgpu-integration">Rust and WebGPU Integration</h3>
+<p>The application leverages Rust's <code>wgpu</code> crate to interface with WebGPU, setting up the rendering context, managing GPU resources, and executing draw calls. Rust's strong type system and memory safety guarantees contribute to a robust and efficient implementation.</p>
+<h3 id="shader-programs">Shader Programs</h3>
+<p>WGSL shaders in the <code>shaders/</code> directory handle the rendering of the globe and hexagonal cells. These shaders compute lighting, color gradients, and other visual effects, offloading intensive computations to the GPU for optimal performance.</p>
+<h3 id="h3-indexing">H3 Indexing</h3>
+<p>H3glObe uses the H3 library to compute hexagonal indices for geospatial data. These indices are then mapped to 3D coordinates on the globe, allowing for accurate placement of hexagonal cells. The hierarchical structure of H3 enables efficient rendering at various zoom levels.</p>
+<hr />
+<h2 id="potential-applications">Potential Applications</h2>
+<ul>
+<li><strong>Data Visualization</strong>: Displaying geospatial datasets such as climate data, traffic patterns, or demographic information.</li>
+<li><strong>Educational Tools</strong>: Teaching concepts related to geography, spatial indexing, or computer graphics.</li>
+<li><strong>Research</strong>: Analyzing spatial phenomena with high-resolution, interactive visualizations.</li>
+</ul>
+<hr />
+<h2 id="future-enhancements">Future Enhancements</h2>
+<p>Potential areas for development include:</p>
+<ul>
+<li><strong>Data Integration</strong>: Allowing users to load custom datasets for visualization.</li>
+<li><strong>Performance Optimization</strong>: Further refining rendering techniques for improved efficiency.</li>
+<li><strong>Feature Expansion</strong>: Adding support for additional geospatial features, such as markers, labels, or time-based animations.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>H3glObe exemplifies the integration of advanced geospatial indexing with modern GPU-accelerated rendering. By combining Rust, WebGPU, and H3, it delivers a high-performance, interactive platform for exploring geospatial data. The project's architecture and implementation serve as a valuable reference for developers interested in similar applications.</p>
+<hr />
+<p><em>Note: For more information and to explore the project, visit the <a href="https://github.com/jwm-dev/H3glObe">H3glObe GitHub repository</a>.</em></p>
+
+      
+  </article>
+</section>
+
+
+       
+
+      <footer>
+        
+          
+          
+<figure class="mini_logo ">
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io" style="background-image: url(/img/portrait.png)"></a>
+</figure>
+<h5>
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io">║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║</a>
+</h5>
+
+          
+<ul class="social_list foot_list">
+    
+
+
+
+<li class="button extra_small font_faint">
+    <a href="https:&#x2F;&#x2F;github.com&#x2F;jwm-dev" target="_blank">
+        jwm-dev@gh
+        <i class="fab fa-github"></i>
+    </a>
+</li>
+
+
+
+<li class="button extra_small font_faint">
+    <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;jeffrey-gregory-b26853294&#x2F;" target="_blank">
+        Jeffrey@Linked
+        <i class="fab fa-linkedin"></i>
+    </a>
+</li>
+
+
+
+<li class="button extra_small font_faint">
+    <a href="mailto:$jwmgregory@gmail.com?subject=[Hello, jwm!]" target="_blank">
+        Mail
+        <i class="fas fa-envelope"></i>
+    </a>
+</li>
+
+
+
+<li class="button extra_small font_faint">
+    <a href="tel:+14057785170" target="_blank">
+        Cellular
+        <i class="fas fa-phone"></i>
+    </a>
+</li>
+
+
+
+
+
+<li class="button extra_small font_faint">
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io&#x2F;atom.xml" target="_blank">
+        atom
+        <i class="fas fa-rss"></i>
+    </a>
+</li>
+
+
+
+</ul>
+
+          
+<select id="theme_selector" size=1>
+    <option value="dark" selected>dark</option>
+    
+    <option value="default">default</option>
+    
+</select>
+
+        
+      </footer>
+    </body>
+</html>

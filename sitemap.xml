@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://jwm-dev.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://jwm-dev.github.io/2048/</loc>
+        <lastmod>2025-06-04</lastmod>
+    </url>
+    <url>
+        <loc>https://jwm-dev.github.io/hexglobe/</loc>
+        <lastmod>2025-04-25</lastmod>
+    </url>
+    <url>
+        <loc>https://jwm-dev.github.io/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://jwm-dev.github.io/sierpinski-tetrix/</loc>
+        <lastmod>2025-04-24</lastmod>
+    </url>
+</urlset>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║</title>
+    <subtitle>&quot;*... If the meaning of the words \&quot;machine\&quot; and \&quot;think\&quot; are to be found by examining how they are commonly used, it is difficult to escape the conclusion that the meaning and the answer to the question, &#x27;Can machines think?&#x27; is to be sought in a statistical survey such as a Gallup poll. But this is absurd.*&quot; 
+
+- Alan M. Turing, *&quot;Computing Machinery and Intelligence,&quot;*  
+01 October 1950</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://jwm-dev.github.io/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://jwm-dev.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-06-04T00:00:00+00:00</updated>
+    <id>https://jwm-dev.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Library of 2048</title>
+        <published>2025-06-04T00:00:00+00:00</published>
+        <updated>2025-06-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jwm-dev.github.io/2048/"/>
+        <id>https://jwm-dev.github.io/2048/</id>
+        
+        <content type="html" xml:base="https://jwm-dev.github.io/2048/">&lt;h1 id=&quot;libraryof2048-a-rust-based-gui-viewer-for-all-117-quintillion-2048-game-states&quot;&gt;LibraryOf2048: A Rust-Based GUI Viewer for All ~117 Quintillion 2048 Game States&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;strong&gt;Project URL:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;jwm.place&#x2F;libraryof2048&#x2F;&quot;&gt;https:&#x2F;&#x2F;jwm.place&#x2F;libraryof2048&#x2F;&lt;&#x2F;a&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;Source Code:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jwm-dev&#x2F;LibraryOf2048&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;jwm-dev&#x2F;LibraryOf2048&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;LibraryOf2048&lt;&#x2F;strong&gt; is a Rust-based application that catalogs and indexes all approximately 117 quintillion possible board states of the classic 2048 game. Inspired by Jonathan Basile’s Library of Babel, this project provides a deterministic, navigable archive of all valid 4×4 tile configurations using a two-part keying system that enables efficient enumeration and lookup. The project includes a GUI interface and serves as a platform for further research into solving the stochastic dynamics of 2048, a PSPACE-complete challenge.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;technical-architecture&quot;&gt;Technical Architecture&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;core-technologies&quot;&gt;Core Technologies&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;&#x2F;strong&gt;: The primary programming language, chosen for its performance and safety features.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;GTK4&lt;&#x2F;strong&gt;: A toolkit for creating graphical user interfaces, utilized for the application&#x27;s GUI.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Serde&lt;&#x2F;strong&gt;: A framework for serializing and deserializing Rust data structures, used for data handling.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;project-structure&quot;&gt;Project Structure&lt;&#x2F;h3&gt;
+&lt;p&gt;The repository is organized as follows:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;src&#x2F;&lt;&#x2F;code&gt;: Contains the main application code, including initialization, rendering logic, and event handling.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;Cargo.toml&lt;&#x2F;code&gt; and &lt;code&gt;Cargo.lock&lt;&#x2F;code&gt;: Define the project&#x27;s dependencies and build configurations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;functionality&quot;&gt;Functionality&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;board-state-enumeration&quot;&gt;Board State Enumeration&lt;&#x2F;h3&gt;
+&lt;p&gt;The application employs a dual-ID system and t-value to uniquely identify each board state:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;T-Value (Tile Count)&lt;&#x2F;strong&gt;: Represents how many tiles are present on the board.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Dual-ID System&lt;&#x2F;strong&gt;: A two-part keying system that enables efficient enumeration and lookup of board states.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This system allows for the representation and navigation of all possible 2048 board configurations.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;graphical-user-interface&quot;&gt;Graphical User Interface&lt;&#x2F;h3&gt;
+&lt;p&gt;The GUI, built with GTK4, provides an interactive platform for users to explore the vast number of board states. It includes features such as:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Board Navigation&lt;&#x2F;strong&gt;: Users can navigate through different board states using the dual-ID system.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;State Visualization&lt;&#x2F;strong&gt;: Each board state is visually represented, allowing users to observe the arrangement of tiles.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;data-handling&quot;&gt;Data Handling&lt;&#x2F;h3&gt;
+&lt;p&gt;Serde is used for serializing and deserializing data, facilitating the efficient storage and retrieval of board states.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;implementation-details&quot;&gt;Implementation Details&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;rust-and-gtk4-integration&quot;&gt;Rust and GTK4 Integration&lt;&#x2F;h3&gt;
+&lt;p&gt;The application leverages Rust&#x27;s GTK4 bindings to create the GUI. This involves setting up the application window, handling user inputs, and rendering the board states.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;board-state-representation&quot;&gt;Board State Representation&lt;&#x2F;h3&gt;
+&lt;p&gt;Each board state is represented using a data structure that encodes the arrangement of tiles. The dual-ID system and t-value are used to uniquely identify and navigate through the board states.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;serialization-with-serde&quot;&gt;Serialization with Serde&lt;&#x2F;h3&gt;
+&lt;p&gt;Serde is utilized to serialize and deserialize the board state data, allowing for efficient storage and retrieval. This ensures that the application can handle the vast number of possible board states without performance degradation.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;potential-applications&quot;&gt;Potential Applications&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Game Analysis&lt;&#x2F;strong&gt;: Studying the dynamics and strategies of the 2048 game.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Algorithm Research&lt;&#x2F;strong&gt;: Investigating algorithms for solving the 2048 game.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Educational Tools&lt;&#x2F;strong&gt;: Teaching concepts related to combinatorics and game theory.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;future-enhancements&quot;&gt;Future Enhancements&lt;&#x2F;h2&gt;
+&lt;p&gt;Potential areas for development include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Algorithm Integration&lt;&#x2F;strong&gt;: Implementing algorithms to solve the 2048 game.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Performance Optimization&lt;&#x2F;strong&gt;: Further refining data handling and rendering techniques for improved efficiency.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Feature Expansion&lt;&#x2F;strong&gt;: Adding support for additional features, such as undo functionality or game state comparisons.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;LibraryOf2048 exemplifies the application of combinatorial game theory and efficient data structures to catalog and explore all possible configurations of the 2048 game. By combining Rust, GTK4, and Serde, it delivers a high-performance, interactive platform for analyzing and understanding the game&#x27;s dynamics. The project&#x27;s architecture and implementation serve as a valuable resource for developers and researchers interested in combinatorial game theory and algorithm design.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;Note: For more information and to explore the project, visit the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jwm-dev&#x2F;LibraryOf2048&quot;&gt;LibraryOf2048 GitHub repository&lt;&#x2F;a&gt;.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>H3glObe, or HexGlobe</title>
+        <published>2025-04-25T00:00:00+00:00</published>
+        <updated>2025-04-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jwm-dev.github.io/hexglobe/"/>
+        <id>https://jwm-dev.github.io/hexglobe/</id>
+        
+        <content type="html" xml:base="https://jwm-dev.github.io/hexglobe/">&lt;h1 id=&quot;h3globe-a-high-performance-hexagonal-geospatial-visualization-tool&quot;&gt;H3glObe: A High-Performance Hexagonal Geospatial Visualization Tool&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;strong&gt;Project URL:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;jwm.place&#x2F;hexglobe&#x2F;&quot;&gt;https:&#x2F;&#x2F;jwm.place&#x2F;hexglobe&#x2F;&lt;&#x2F;a&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;Source Code:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jwm-dev&#x2F;H3glObe&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;jwm-dev&#x2F;H3glObe&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;H3glObe&lt;&#x2F;strong&gt; is a geospatial visualization tool that renders a 3D globe overlaid with hexagonal cells, utilizing the H3 geospatial indexing system. Built with Rust and WebGPU, it offers high-performance, real-time rendering capabilities directly in the browser. The project is designed to demonstrate the integration of H3 indexing with modern GPU-accelerated graphics, providing an interactive platform for exploring geospatial data.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;technical-architecture&quot;&gt;Technical Architecture&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;core-technologies&quot;&gt;Core Technologies&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;&#x2F;strong&gt;: The primary programming language, chosen for its performance and safety features.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;WebGPU&lt;&#x2F;strong&gt;: A modern graphics API that enables high-performance rendering in web environments.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;H3&lt;&#x2F;strong&gt;: A hexagonal hierarchical geospatial indexing system developed by Uber, used for spatial indexing and visualization.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;project-structure&quot;&gt;Project Structure&lt;&#x2F;h3&gt;
+&lt;p&gt;The repository is organized as follows:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;src&#x2F;&lt;&#x2F;code&gt;: Contains the main application code, including initialization, rendering logic, and event handling.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;shaders&#x2F;&lt;&#x2F;code&gt;: Houses WGSL (WebGPU Shading Language) shader programs responsible for rendering the globe and hexagonal cells.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;Cargo.toml&lt;&#x2F;code&gt; and &lt;code&gt;Cargo.lock&lt;&#x2F;code&gt;: Define the project&#x27;s dependencies and build configurations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;functionality&quot;&gt;Functionality&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;globe-rendering&quot;&gt;Globe Rendering&lt;&#x2F;h3&gt;
+&lt;p&gt;H3glObe renders a 3D globe using WebGPU, mapping textures and lighting to create a realistic representation of the Earth. The rendering pipeline is optimized for performance, allowing smooth interactions and real-time updates.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;hexagonal-overlay&quot;&gt;Hexagonal Overlay&lt;&#x2F;h3&gt;
+&lt;p&gt;Utilizing the H3 indexing system, the application overlays hexagonal cells onto the globe. These cells can represent various data metrics, such as population density, temperature, or other geospatial information. The hierarchical nature of H3 allows for multiple levels of detail, enabling users to zoom in and out seamlessly.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;interactivity&quot;&gt;Interactivity&lt;&#x2F;h3&gt;
+&lt;p&gt;Users can interact with the globe through mouse or touch inputs, rotating and zooming to explore different regions. The application responds dynamically to user interactions, updating the visualization in real-time.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;implementation-details&quot;&gt;Implementation Details&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;rust-and-webgpu-integration&quot;&gt;Rust and WebGPU Integration&lt;&#x2F;h3&gt;
+&lt;p&gt;The application leverages Rust&#x27;s &lt;code&gt;wgpu&lt;&#x2F;code&gt; crate to interface with WebGPU, setting up the rendering context, managing GPU resources, and executing draw calls. Rust&#x27;s strong type system and memory safety guarantees contribute to a robust and efficient implementation.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;shader-programs&quot;&gt;Shader Programs&lt;&#x2F;h3&gt;
+&lt;p&gt;WGSL shaders in the &lt;code&gt;shaders&#x2F;&lt;&#x2F;code&gt; directory handle the rendering of the globe and hexagonal cells. These shaders compute lighting, color gradients, and other visual effects, offloading intensive computations to the GPU for optimal performance.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;h3-indexing&quot;&gt;H3 Indexing&lt;&#x2F;h3&gt;
+&lt;p&gt;H3glObe uses the H3 library to compute hexagonal indices for geospatial data. These indices are then mapped to 3D coordinates on the globe, allowing for accurate placement of hexagonal cells. The hierarchical structure of H3 enables efficient rendering at various zoom levels.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;potential-applications&quot;&gt;Potential Applications&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data Visualization&lt;&#x2F;strong&gt;: Displaying geospatial datasets such as climate data, traffic patterns, or demographic information.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Educational Tools&lt;&#x2F;strong&gt;: Teaching concepts related to geography, spatial indexing, or computer graphics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Research&lt;&#x2F;strong&gt;: Analyzing spatial phenomena with high-resolution, interactive visualizations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;future-enhancements&quot;&gt;Future Enhancements&lt;&#x2F;h2&gt;
+&lt;p&gt;Potential areas for development include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data Integration&lt;&#x2F;strong&gt;: Allowing users to load custom datasets for visualization.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Performance Optimization&lt;&#x2F;strong&gt;: Further refining rendering techniques for improved efficiency.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Feature Expansion&lt;&#x2F;strong&gt;: Adding support for additional geospatial features, such as markers, labels, or time-based animations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;H3glObe exemplifies the integration of advanced geospatial indexing with modern GPU-accelerated rendering. By combining Rust, WebGPU, and H3, it delivers a high-performance, interactive platform for exploring geospatial data. The project&#x27;s architecture and implementation serve as a valuable reference for developers interested in similar applications.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;Note: For more information and to explore the project, visit the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jwm-dev&#x2F;H3glObe&quot;&gt;H3glObe GitHub repository&lt;&#x2F;a&gt;.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>3D Sierpinski Tetrix</title>
+        <published>2025-04-24T00:00:00+00:00</published>
+        <updated>2025-04-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jwm-dev.github.io/sierpinski-tetrix/"/>
+        <id>https://jwm-dev.github.io/sierpinski-tetrix/</id>
+        
+        <content type="html" xml:base="https://jwm-dev.github.io/sierpinski-tetrix/">&lt;h1 id=&quot;sierpinski-tetrix-recursive-geometry-via-raw-gpu-compute&quot;&gt;Sierpinski Tetrix: Recursive Geometry via Raw GPU Compute&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;strong&gt;Project by jwm&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;Built in Rust with raw WebGPU + compute shaders&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;Sierpinski Tetrix is a real-time graphical demonstration of geometric recursion, implemented entirely from scratch using Rust and raw WebGPU bindings. The application procedurally generates a 3D Sierpinski tetrahedron—also known as a &quot;tetrix&quot;—through recursive subdivision, rendered in both solid and wireframe modes. Unlike conventional graphics applications that rely on high-level engines or scenegraph libraries, Sierpinski Tetrix constructs the full rendering pipeline manually, leveraging compute shaders and explicit GPU control.&lt;&#x2F;p&gt;
+&lt;p&gt;The result is a minimalist, performant, and technically sophisticated rendering system that foregrounds GPU-based recursion and low-level graphical computation.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Recursive Tetrahedral Subdivision&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+Starting from a single regular tetrahedron, the system recursively subdivides geometry into self-similar parts. This geometric recursion is efficiently computed on the GPU via custom compute shaders, allowing real-time rendering at significant subdivision depths.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dual Rendering Modes&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Solid Mode&lt;&#x2F;strong&gt;: Displays the filled geometry with basic shading.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Wireframe Mode&lt;&#x2F;strong&gt;: Emphasizes structure and recursion with edge-only rendering, ideal for understanding the recursive nature of the fractal.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Manual Rendering Pipeline&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+Every stage of the graphics pipeline is explicitly constructed, from vertex buffer generation to render pass encoding. There are no abstractions—no third-party engines or high-level wrappers—resulting in complete control over GPU memory, shader compilation, and pipeline configuration.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;technical-implementation&quot;&gt;Technical Implementation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;core-technologies&quot;&gt;Core Technologies&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;&#x2F;strong&gt;: The foundation of the application, chosen for its performance, safety guarantees, and tight integration with modern GPU APIs.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;WebGPU (via &lt;code&gt;wgpu&lt;&#x2F;code&gt;)&lt;&#x2F;strong&gt;: The raw graphics API targeted at modern graphics backends, including Vulkan, Metal, and DirectX 12. It is used here at a very low level to construct all render and compute passes by hand.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;WGSL Shaders&lt;&#x2F;strong&gt;: Custom-written shaders in WebGPU Shading Language, including compute shaders for geometry generation and vertex&#x2F;fragment shaders for final rendering.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;compute-pipeline&quot;&gt;Compute Pipeline&lt;&#x2F;h3&gt;
+&lt;p&gt;At the heart of the application is a GPU-based recursive subdivision algorithm. The base tetrahedron is defined in host memory, and recursive subdivision is offloaded to compute shaders, which emit child tetrahedra in parallel. Each level of recursion quadratically increases the number of tetrahedra rendered, resulting in a richly detailed geometric fractal.&lt;&#x2F;p&gt;
+&lt;p&gt;Compute shader responsibilities include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vertex generation per recursion level&lt;&#x2F;li&gt;
+&lt;li&gt;Edge deduplication (for wireframe mode)&lt;&#x2F;li&gt;
+&lt;li&gt;Buffer reallocation and geometry streaming to the GPU&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;render-pipeline&quot;&gt;Render Pipeline&lt;&#x2F;h3&gt;
+&lt;p&gt;The rendering stage is fully custom:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Wireframe&lt;&#x2F;strong&gt;: Implemented by rendering individual line segments stored in a geometry buffer. No hardware tessellation or geometry shaders are used.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Solid&lt;&#x2F;strong&gt;: Renders filled tetrahedra using indexed triangle draws, with flat shading and basic camera controls.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The pipeline supports dynamic switching between modes without full reinitialization.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;goals-and-rationale&quot;&gt;Goals and Rationale&lt;&#x2F;h2&gt;
+&lt;p&gt;This project serves multiple purposes:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Demonstrate Recursive Geometry&lt;&#x2F;strong&gt;: The Sierpinski tetrahedron is an iconic example of 3D recursion, well-suited to GPU-parallel algorithms.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Showcase Low-Level GPU Programming&lt;&#x2F;strong&gt;: All rendering is implemented directly, without helper crates or ECS systems.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Explore Compute Shaders&lt;&#x2F;strong&gt;: Procedural geometry generation is handled almost entirely on the GPU, pushing modern compute APIs to their limits in a non-trivial context.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;future-directions&quot;&gt;Future Directions&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Recursion Depth&lt;&#x2F;strong&gt;: Real-time adjustment of recursion levels with adaptive LOD.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fractal Variants&lt;&#x2F;strong&gt;: Exploration of other 3D recursive structures, e.g., Menger sponge, octahedral Sierpinski.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Interactive Controls&lt;&#x2F;strong&gt;: Camera orbit, zoom, and toggles for shader introspection or subdivision debugging.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;Sierpinski Tetrix is a raw, performance-focused demonstration of real-time recursive geometry using only fundamental tools. By eschewing engines and embracing the bare-metal WebGPU pipeline, the project illustrates both technical mastery and artistic minimalism. It stands as a testament to what is possible when low-level GPU programming is treated as a craft, not an afterthought.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

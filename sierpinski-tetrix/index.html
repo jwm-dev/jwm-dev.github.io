@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- SEO -->
+        
+        <title> 3D Sierpinski Tetrix | ║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║ </title>
+        
+
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" >
+
+        <!-- js -->
+        <script src="https:&#x2F;&#x2F;jwm-dev.github.io/theme_selector.js"></script>
+        <script src="https://kit.fontawesome.com/d203275317.js" crossorigin="anonymous"></script>
+
+        <!--  css -->
+        <link id="themeCSS" rel="stylesheet"
+                            href="https:&#x2F;&#x2F;jwm-dev.github.io/dark.css"
+                            />
+
+        <!-- fonts -->
+        <!-- preload  -->
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway" as="style">
+        <!-- load -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,500,500i,600,700,800,900|Raleway">
+        
+
+        
+        
+        <link rel="alternate" type="application/atom+xml" title="║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║ RSS" href="https://jwm-dev.github.io/atom.xml">
+        
+        
+    </head>
+
+    <body onload="main();">
+      
+<input type="checkbox" id="openSidebarMenu" class="openSidebarMenu">
+<label class="menu cross menu--1" for="openSidebarMenu">
+    <svg viewBox="0 0 75 75" xmlns="https://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="30" />
+        <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+        <path class="line--2" d="M0 50h70" />
+        <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+    </svg>
+</label>
+
+<div id="sidebarMenu">
+    <div class="menu_wrapper">
+        <ul class="sidebarMenuInner">
+            <li>
+                <a href="https:&#x2F;&#x2F;jwm-dev.github.io" >║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║</a>
+                <div class="menu_div" ></div>
+            </li>
+            
+            
+
+
+
+<li >
+    <a href="https:&#x2F;&#x2F;github.com&#x2F;jwm-dev" target="_blank">
+        jwm-dev@gh
+        <i class="fab fa-github"></i>
+    </a>
+</li>
+
+
+
+<li >
+    <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;jeffrey-gregory-b26853294&#x2F;" target="_blank">
+        Jeffrey@Linked
+        <i class="fab fa-linkedin"></i>
+    </a>
+</li>
+
+
+
+<li >
+    <a href="mailto:$jwmgregory@gmail.com?subject=[Hello, jwm!]" target="_blank">
+        Mail
+        <i class="fas fa-envelope"></i>
+    </a>
+</li>
+
+
+
+<li >
+    <a href="tel:+14057785170" target="_blank">
+        Cellular
+        <i class="fas fa-phone"></i>
+    </a>
+</li>
+
+
+
+
+
+<li >
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io&#x2F;atom.xml" target="_blank">
+        atom
+        <i class="fas fa-rss"></i>
+    </a>
+</li>
+
+
+
+        </ul>
+    </div>
+</div>
+
+
+
+      
+<nav id="overlord" class="overlord" >
+  
+  
+<figure class="mini_logo ">
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io" style="background-image: url(/img/portrait.png)"></a>
+</figure>
+<h5>
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io">║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║</a>
+</h5>
+
+  
+
+
+
+</nav>
+
+<section class="post_container">
+  <article>
+    
+      <h1 class="article_title"><a href="https:&#x2F;&#x2F;jwm-dev.github.io&#x2F;sierpinski-tetrix&#x2F;" id="article_link">3D Sierpinski Tetrix</a></h1>
+      
+<ul class="frontmatter frontmatter_page" id="frontmatter">
+    <li>
+        <time class="article_time" datetime="2025-04-24">April 24, 2025</time>
+    </li>
+    <span class="dotDivider"></span>
+    <li> 610 words </li>
+    <span class="dotDivider" ></span>
+    <li> 4 min </li>
+</ul>
+
+      <h1 id="sierpinski-tetrix-recursive-geometry-via-raw-gpu-compute">Sierpinski Tetrix: Recursive Geometry via Raw GPU Compute</h1>
+<p><strong>Project by jwm</strong><br />
+<strong>Built in Rust with raw WebGPU + compute shaders</strong></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>Sierpinski Tetrix is a real-time graphical demonstration of geometric recursion, implemented entirely from scratch using Rust and raw WebGPU bindings. The application procedurally generates a 3D Sierpinski tetrahedron—also known as a "tetrix"—through recursive subdivision, rendered in both solid and wireframe modes. Unlike conventional graphics applications that rely on high-level engines or scenegraph libraries, Sierpinski Tetrix constructs the full rendering pipeline manually, leveraging compute shaders and explicit GPU control.</p>
+<p>The result is a minimalist, performant, and technically sophisticated rendering system that foregrounds GPU-based recursion and low-level graphical computation.</p>
+<hr />
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>
+<p><strong>Recursive Tetrahedral Subdivision</strong><br />
+Starting from a single regular tetrahedron, the system recursively subdivides geometry into self-similar parts. This geometric recursion is efficiently computed on the GPU via custom compute shaders, allowing real-time rendering at significant subdivision depths.</p>
+</li>
+<li>
+<p><strong>Dual Rendering Modes</strong></p>
+<ul>
+<li><strong>Solid Mode</strong>: Displays the filled geometry with basic shading.</li>
+<li><strong>Wireframe Mode</strong>: Emphasizes structure and recursion with edge-only rendering, ideal for understanding the recursive nature of the fractal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Manual Rendering Pipeline</strong><br />
+Every stage of the graphics pipeline is explicitly constructed, from vertex buffer generation to render pass encoding. There are no abstractions—no third-party engines or high-level wrappers—resulting in complete control over GPU memory, shader compilation, and pipeline configuration.</p>
+</li>
+</ul>
+<hr />
+<h2 id="technical-implementation">Technical Implementation</h2>
+<h3 id="core-technologies">Core Technologies</h3>
+<ul>
+<li><strong>Rust</strong>: The foundation of the application, chosen for its performance, safety guarantees, and tight integration with modern GPU APIs.</li>
+<li><strong>WebGPU (via <code>wgpu</code>)</strong>: The raw graphics API targeted at modern graphics backends, including Vulkan, Metal, and DirectX 12. It is used here at a very low level to construct all render and compute passes by hand.</li>
+<li><strong>WGSL Shaders</strong>: Custom-written shaders in WebGPU Shading Language, including compute shaders for geometry generation and vertex/fragment shaders for final rendering.</li>
+</ul>
+<h3 id="compute-pipeline">Compute Pipeline</h3>
+<p>At the heart of the application is a GPU-based recursive subdivision algorithm. The base tetrahedron is defined in host memory, and recursive subdivision is offloaded to compute shaders, which emit child tetrahedra in parallel. Each level of recursion quadratically increases the number of tetrahedra rendered, resulting in a richly detailed geometric fractal.</p>
+<p>Compute shader responsibilities include:</p>
+<ul>
+<li>Vertex generation per recursion level</li>
+<li>Edge deduplication (for wireframe mode)</li>
+<li>Buffer reallocation and geometry streaming to the GPU</li>
+</ul>
+<h3 id="render-pipeline">Render Pipeline</h3>
+<p>The rendering stage is fully custom:</p>
+<ul>
+<li><strong>Wireframe</strong>: Implemented by rendering individual line segments stored in a geometry buffer. No hardware tessellation or geometry shaders are used.</li>
+<li><strong>Solid</strong>: Renders filled tetrahedra using indexed triangle draws, with flat shading and basic camera controls.</li>
+</ul>
+<p>The pipeline supports dynamic switching between modes without full reinitialization.</p>
+<hr />
+<h2 id="goals-and-rationale">Goals and Rationale</h2>
+<p>This project serves multiple purposes:</p>
+<ol>
+<li><strong>Demonstrate Recursive Geometry</strong>: The Sierpinski tetrahedron is an iconic example of 3D recursion, well-suited to GPU-parallel algorithms.</li>
+<li><strong>Showcase Low-Level GPU Programming</strong>: All rendering is implemented directly, without helper crates or ECS systems.</li>
+<li><strong>Explore Compute Shaders</strong>: Procedural geometry generation is handled almost entirely on the GPU, pushing modern compute APIs to their limits in a non-trivial context.</li>
+</ol>
+<hr />
+<h2 id="future-directions">Future Directions</h2>
+<ul>
+<li><strong>Dynamic Recursion Depth</strong>: Real-time adjustment of recursion levels with adaptive LOD.</li>
+<li><strong>Fractal Variants</strong>: Exploration of other 3D recursive structures, e.g., Menger sponge, octahedral Sierpinski.</li>
+<li><strong>Interactive Controls</strong>: Camera orbit, zoom, and toggles for shader introspection or subdivision debugging.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Sierpinski Tetrix is a raw, performance-focused demonstration of real-time recursive geometry using only fundamental tools. By eschewing engines and embracing the bare-metal WebGPU pipeline, the project illustrates both technical mastery and artistic minimalism. It stands as a testament to what is possible when low-level GPU programming is treated as a craft, not an afterthought.</p>
+
+      
+  </article>
+</section>
+
+
+       
+
+      <footer>
+        
+          
+          
+<figure class="mini_logo ">
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io" style="background-image: url(/img/portrait.png)"></a>
+</figure>
+<h5>
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io">║ 𝕛𝕨𝕞-𝕕𝕖𝕧 ║</a>
+</h5>
+
+          
+<ul class="social_list foot_list">
+    
+
+
+
+<li class="button extra_small font_faint">
+    <a href="https:&#x2F;&#x2F;github.com&#x2F;jwm-dev" target="_blank">
+        jwm-dev@gh
+        <i class="fab fa-github"></i>
+    </a>
+</li>
+
+
+
+<li class="button extra_small font_faint">
+    <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;jeffrey-gregory-b26853294&#x2F;" target="_blank">
+        Jeffrey@Linked
+        <i class="fab fa-linkedin"></i>
+    </a>
+</li>
+
+
+
+<li class="button extra_small font_faint">
+    <a href="mailto:$jwmgregory@gmail.com?subject=[Hello, jwm!]" target="_blank">
+        Mail
+        <i class="fas fa-envelope"></i>
+    </a>
+</li>
+
+
+
+<li class="button extra_small font_faint">
+    <a href="tel:+14057785170" target="_blank">
+        Cellular
+        <i class="fas fa-phone"></i>
+    </a>
+</li>
+
+
+
+
+
+<li class="button extra_small font_faint">
+    <a href="https:&#x2F;&#x2F;jwm-dev.github.io&#x2F;atom.xml" target="_blank">
+        atom
+        <i class="fas fa-rss"></i>
+    </a>
+</li>
+
+
+
+</ul>
+
+          
+<select id="theme_selector" size=1>
+    <option value="dark" selected>dark</option>
+    
+    <option value="default">default</option>
+    
+</select>
+
+        
+      </footer>
+    </body>
+</html>
